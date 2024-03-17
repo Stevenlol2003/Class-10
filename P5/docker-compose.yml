@@ -1,0 +1,45 @@
+services:
+    nb:
+        image: p5-nb
+        ports:
+            - "127.0.0.1:5000:5000"
+            - "127.0.0.1:4040:4040"
+        volumes:
+            - "./nb:/nb"
+        deploy:
+            resources:
+                limits:
+                    memory: 1.5G
+
+    nn:
+        image: p5-nn
+        hostname: nn
+        deploy:
+            resources:
+                limits:
+                    memory: 1G
+
+    dn:
+        image: p5-dn
+        deploy:
+            resources:
+                limits:
+                    memory: 1.5G
+
+    spark-boss:
+        image: p5-boss
+        hostname: boss
+        command: sh -c "/spark-3.5.0-bin-hadoop3/sbin/start-master.sh && sleep infinity"
+        deploy:
+            resources:
+                limits:
+                    memory: 1.5G
+
+    spark-worker:
+        image: p5-worker
+        command: sh -c "/spark-3.5.0-bin-hadoop3/sbin/start-worker.sh spark://boss:7077 -c 1 -m 512M && sleep infinity"
+        deploy:
+            replicas: 2
+            resources:
+                limits:
+                    memory: 1.5G
