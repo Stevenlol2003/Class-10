@@ -1,0 +1,33 @@
+{
+  "score": 70,
+  "full_score": 100,
+  "tests": {
+    "q1": "PASS (10/10)",
+    "q2": "PASS (10/10)",
+    "q3": "PASS (10/10)",
+    "q4": "PASS (10/10)",
+    "q5": "PASS (10/10)",
+    "q6": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/gkimm/project-4-pizza/tester.py\", line 33, in run\n    result = self.func()\n",
+      "  File \"/home/gkimm/project-4-pizza/autograde.py\", line 309, in q6\n    assert ANSWERS[6] == \"b'activity_y'\"\n",
+      "AssertionError\n"
+    ],
+    "q7": "PASS (10/10)",
+    "q8": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/gkimm/project-4-pizza/tester.py\", line 33, in run\n    result = self.func()\n",
+      "  File \"/home/gkimm/project-4-pizza/autograde.py\", line 318, in q8\n    check_has_answer(8)\n",
+      "  File \"/home/gkimm/project-4-pizza/autograde.py\", line 252, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 8 not found\n"
+    ],
+    "q9": [
+      "Traceback (most recent call last):\n",
+      "  File \"/home/gkimm/project-4-pizza/tester.py\", line 33, in run\n    result = self.func()\n",
+      "  File \"/home/gkimm/project-4-pizza/autograde.py\", line 324, in q9\n    check_has_answer(9)\n",
+      "  File \"/home/gkimm/project-4-pizza/autograde.py\", line 252, in check_has_answer\n    raise Exception(f\"Answer to question {num} not found\")\n",
+      "Exception: Answer to question 9 not found\n"
+    ],
+    "q10": "PASS (10/10)"
+  }
+}
